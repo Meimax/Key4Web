@@ -4,5 +4,5 @@ WORKDIR /app
 COPY ./ .
 WORKDIR /app/Key4Web
 RUN npm install
-ENTRYPOINT [ "npm", "run",  "build", "--"]
+ENTRYPOINT [ "npm", "run",  "dev", "--"]
 EXPOSE 5173
