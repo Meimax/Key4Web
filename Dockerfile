@@ -1,8 +1,9 @@
 FROM node:alpine
 RUN apk update && apk upgrade
 WORKDIR /app
-COPY ./ .
+COPY ./build .
+COPY package.json .
 WORKDIR /app/Key4Web
-RUN npm install
-ENTRYPOINT [ "npm", "run",  "dev", "--"]
-EXPOSE 5173
+#RUN npm install
+ENTRYPOINT [ "node", "build"]
+EXPOSE 3000
