@@ -11,16 +11,17 @@
 </script>
 
 <main class="container">
-	<header class="container">
-		<hgroup>
-			<h1>Key4Web</h1>
-		</hgroup>
-		{#if locks.locks}
+	{#if locks.locks}
+		<article>
+			<hgroup>
+				<h1>Key4Web</h1>
+				<h2>Locks</h2>
+			</hgroup>
 			{#each locks.locks as lock}
 				<LockComponent id={lock.id} name={lock.name}></LockComponent>
 			{/each}
-		{:else}
-			<Settings></Settings>
-		{/if}
-	</header>
+		</article>
+	{:else}
+		<Settings></Settings>
+	{/if}
 </main>

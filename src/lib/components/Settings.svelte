@@ -22,10 +22,7 @@
 <main class="container">
 	<article class="grid">
 		<div>
-			<hgroup>
-				<h1>Sign in</h1>
-				<h2>A minimalist layout for Login pages</h2>
-			</hgroup>
+			<h1>Sign in</h1>
 			<form>
 				<input
 					bind:value={email}
@@ -47,12 +44,13 @@
 					aria-invalid={unsuccessful}
 					required
 				/>
-				<fieldset>
+				<!--<fieldset>
 					<label for="remember">
 						<input type="checkbox" role="switch" id="remember" name="remember" />
 						Remember me
 					</label>
 				</fieldset>
+                -->
 				<button type="submit" class="contrast" on:click|preventDefault={action}>Login</button>
 			</form>
 		</div>
