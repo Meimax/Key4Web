@@ -10,9 +10,9 @@
 	//console.log(locks);
 </script>
 
-<main class="container">
+<main class="container" style="padding-top:0">
 	{#if locks.locks}
-		<article>
+		<article style="margin-top:0">
 			<hgroup>
 				<h1>Key4Web</h1>
 				<h2>Locks</h2>

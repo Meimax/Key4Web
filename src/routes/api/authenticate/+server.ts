@@ -1,6 +1,6 @@
 import { getAuthorizationCookie } from '$lib/server/SimonsVossApiWrapper.js';
 /** @type {import('./$types').RequestHandler} */
-export function GET({ request }) {
+export function POST({ request }) {
     const AuthorizationString = request.headers.get("Authorization");
     if (!AuthorizationString) {
         return new Response(JSON.stringify("No authorization provided."), { status: 401, statusText: "Unauthorized" })
