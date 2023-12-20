@@ -5,7 +5,7 @@
 	function action() {
 		const encoded = btoa(`${email}:${password}`);
 		fetch('/api/authenticate', {
-			method: 'GET',
+			method: 'POST',
 			headers: { Authorization: `Basic ${encoded}` }
 		}).then((res) => {
 			if (res.status != 200) {
