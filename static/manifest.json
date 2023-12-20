@@ -1,0 +1,12 @@
+{
+    "name": "Key4Web",
+    "icons": [
+      {
+        "src": "icons/512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "display": "fullscreen"
+  }
+  
