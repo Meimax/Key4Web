@@ -20,9 +20,7 @@
 
 <button on:click={openLock}>
 	<span>
-		<strong>{name}</strong>
-		<small>id: {id}</small>
-		<span style="float:right">
+		<span style="float:left">
 			{#if icon == STATE.LOCKED}
 				<i class="material-symbols-outlined">lock</i>
 			{:else if icon == STATE.LOADING}
@@ -31,6 +29,8 @@
 				<i class="material-symbols-outlined">key</i>
 			{/if}
 		</span>
+		<strong>{name}</strong>
+		<small>id: {id}</small>
 	</span>
 </button>
 
