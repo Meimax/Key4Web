@@ -17,7 +17,11 @@
 				<h2>Locks</h2>
 			</hgroup>
 			{#each locks.locks as lock}
-				<LockComponent id={lock.id} name={lock.name}></LockComponent>
+				<LockComponent
+					id={lock.id}
+					name="{lock.name},"
+					timeout={lock.components[0].settings.timeout ?? 0}
+				></LockComponent>
 			{/each}
 		</article>
 	{:else}

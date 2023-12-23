@@ -13,5 +13,5 @@
 </script>
 
 <main class="container">
-	<LockComponent id={lock.id} name={lock.name}></LockComponent>
+	<LockComponent id={lock.id} name={lock.name} timeout={25}></LockComponent>
 </main>
