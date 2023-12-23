@@ -15,7 +15,7 @@
 		5: 6,
 		2: 7
 	};
-	locks = data.locks.sort((i1: Lock, i2: Lock) => reorder[i1.id] - reorder[i2.id]);
+	locks = data?.locks?.sort((i1: Lock, i2: Lock) => reorder[i1.id] - reorder[i2.id]);
 </script>
 
 <main class="container" style="padding-top:0">
