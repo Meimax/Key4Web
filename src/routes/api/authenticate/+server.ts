@@ -7,9 +7,13 @@ export function POST({ request }) {
     }
     return getAuthorizationCookie(AuthorizationString).then(cookie => {
         if (!cookie) {
-            //console.log("empty");
             return new Response(JSON.stringify("failed"), { status: 401, statusText: "Unauthorized" })
         }
+
+        // set cookie to expire in one year instead of being a session cookie
+        let date = new Date();
+        date.setFullYear(date.getFullYear() + 1);
+        cookie = cookie.concat("; Expires=", date.toUTCString());
         return new Response('"success"', { headers: { "Set-Cookie": cookie! } })
     })
 }

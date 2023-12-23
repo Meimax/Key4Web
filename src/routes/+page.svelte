@@ -7,7 +7,6 @@
 	/** @type {import('./$types').PageData} */
 	export let data;
 	locks = data;
-	//console.log(locks);
 </script>
 
 <main class="container" style="padding-top:0">
