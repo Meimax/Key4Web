@@ -18,7 +18,7 @@
 	}
 </script>
 
-<button on:click={openLock}>
+<button on:click={openLock} class="outline">
 	<span>
 		<span style="float:left">
 			{#if icon == STATE.LOCKED}
