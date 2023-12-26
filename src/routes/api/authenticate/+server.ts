@@ -11,7 +11,7 @@ export function POST({ request }) {
         }
 
         // set cookie to expire in one year instead of being a session cookie
-        let date = new Date();
+        const date = new Date();
         date.setFullYear(date.getFullYear() + 1);
         cookie = cookie.concat("; Expires=", date.toUTCString());
         return new Response('"success"', { headers: { "Set-Cookie": cookie! } })
