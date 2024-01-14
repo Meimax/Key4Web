@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Locks, Lock } from '$lib/Locks';
+	import type { Lock } from '$lib/Locks';
 	import LockComponent from '$lib/components/LockComponent.svelte';
 	import Settings from '$lib/components/Settings.svelte';
 
@@ -28,7 +28,7 @@
 			{#each locks as lock}
 				<LockComponent
 					id={lock.id}
-					name="{lock.name}"
+					name={lock.name}
 					timeout={lock.components[0].settings.timeout ?? 0}
 				></LockComponent>
 			{/each}

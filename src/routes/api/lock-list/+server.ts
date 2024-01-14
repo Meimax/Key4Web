@@ -6,7 +6,7 @@ export function POST({ cookies }) {
     if (!authorizationCookie) {
         return new Response(JSON.stringify("Unauthorized"), { status: 401, statusText: "Unauthorized" })
     }
-    //console.log(authorizationCookie)
+    console.log(authorizationCookie)
 
     return sendApiCall(APIREQUEST.ListLocks, authorizationCookie)
         .then((res) => res.json())
